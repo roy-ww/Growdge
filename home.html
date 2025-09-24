@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotebookLM - 主页</title>
+    <link rel="stylesheet" href="home-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="logo-icon">N</div>
+                <span class="logo-text">NotebookLM</span>
+            </div>
+        </div>
+        
+        <nav class="header-nav">
+            <button class="nav-tab active" data-tab="all">全部</button>
+            <button class="nav-tab" data-tab="my">我的笔记本</button>
+            <button class="nav-tab" data-tab="featured">精选笔记本</button>
+        </nav>
+        
+        <div class="header-right">
+            <button class="icon-btn" title="设置">
+                <i class="fas fa-cog"></i>
+            </button>
+            <button class="icon-btn" title="网格视图">
+                <i class="fas fa-th"></i>
+            </button>
+            <div class="user-avatar">
+                <img src="https://via.placeholder.com/32x32/4A90E2/FFFFFF?text=U" alt="用户头像">
+            </div>
+            <button class="btn-new">
+                <i class="fas fa-plus"></i>
+                新建
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- 精选笔记本部分 -->
+        <section class="featured-section">
+            <div class="section-header">
+                <h2>精选笔记本</h2>
+                <div class="section-controls">
+                    <div class="view-controls">
+                        <button class="view-btn active" data-view="grid" title="网格视图">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button class="view-btn" data-view="list" title="列表视图">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                    <div class="filter-controls">
+                        <select class="filter-select" title="筛选选项">
+                            <option value="recent">最近</option>
+                            <option value="popular">最受欢迎</option>
+                            <option value="newest">最新</option>
+                        </select>
+                    </div>
+                    <button class="btn-new">
+                        <i class="fas fa-plus"></i>
+                        新建
+                    </button>
+                </div>
+            </div>
+            
+            <div class="notebooks-grid">
+                <div class="notebook-card featured">
+                    <div class="card-thumbnail">
+                        <img src="https://via.placeholder.com/300x200/1a1a1a/FF6B6B?text=📊" alt="全球大趋势">
+                        <div class="card-overlay">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-source">
+                            <img src="https://via.placeholder.com/20x20/FF6B6B/FFFFFF?text=E" alt="The Economist">
+                            <span>The Economist</span>
+                        </div>
+                        <h3 class="card-title">2025年全球大趋势</h3>
+                        <p class="card-meta">2025年7月7日 · 70个来源</p>
+                    </div>
+                </div>
+                
+                <div class="notebook-card featured">
+                    <div class="card-thumbnail">
+                        <img src="https://via.placeholder.com/300x200/1a1a1a/4ECDC4?text=🌱" alt="健康长寿秘诀">
+                        <div class="card-overlay">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-source">
+                            <img src="https://via.placeholder.com/20x20/4ECDC4/FFFFFF?text=ET" alt="Eric Topol">
+                            <span>Eric Topol</span>
+                        </div>
+                        <h3 class="card-title">健康长寿秘诀</h3>
+                        <p class="card-meta">2025年5月6日 · 17个来源</p>
+                    </div>
+                </div>
+                
+                <div class="notebook-card featured">
+                    <div class="card-thumbnail">
+                        <img src="https://via.placeholder.com/300x200/1a1a1a/45B7D1?text=📈" alt="企业盈利报告">
+                        <div class="card-overlay">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-source">
+                            <img src="https://via.placeholder.com/20x20/45B7D1/FFFFFF?text=N" alt="Business">
+                            <span>Business</span>
+                        </div>
+                        <h3 class="card-title">前50大企业的盈利报告</h3>
+                        <p class="card-meta">2025年4月18日 · 168个来源</p>
+                    </div>
+                </div>
+                
+                <div class="notebook-card featured">
+                    <div class="card-thumbnail">
+                        <img src="https://via.placeholder.com/300x200/1a1a1a/FFA07A?text=👥" alt="健康财富幸福趋势">
+                        <div class="card-overlay">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-source">
+                            <img src="https://via.placeholder.com/20x20/FFA07A/FFFFFF?text=OW" alt="Our World in Data">
+                            <span>Our World in Data</span>
+                        </div>
+                        <h3 class="card-title">健康、财富和幸福趋势</h3>
+                        <p class="card-meta">2025年4月15日 · 24个来源</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-footer">
+                <a href="#" class="view-all-link">查看全部 ></a>
+            </div>
+        </section>
+
+        <!-- 最近打开过的笔记本部分 -->
+        <section class="recent-section">
+            <div class="section-header">
+                <h2>最近打开过的笔记本</h2>
+            </div>
+            
+            <div class="notebooks-grid">
+                <div class="notebook-card new-notebook">
+                    <div class="card-icon">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">新建笔记本</h3>
+                    </div>
+                </div>
+                
+                <div class="notebook-card">
+                    <div class="card-icon">
+                        <i class="fas fa-book notebook-icon"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Untitled notebook</h3>
+                        <p class="card-meta">2025年9月23日 · 0个来源</p>
+                    </div>
+                    <button class="card-menu" title="更多选项">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                </div>
+                
+                <div class="notebook-card">
+                    <div class="card-icon">
+                        <i class="fas fa-book notebook-icon"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Untitled notebook</h3>
+                        <p class="card-meta">2025年9月23日 · 0个来源</p>
+                    </div>
+                    <button class="card-menu" title="更多选项">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                </div>
+                
+                <div class="notebook-card">
+                    <div class="card-icon">
+                        <i class="fas fa-book notebook-icon"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Untitled notebook</h3>
+                        <p class="card-meta">2025年9月23日 · 0个来源</p>
+                    </div>
+                    <button class="card-menu" title="更多选项">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                </div>
+                
+                <div class="notebook-card">
+                    <div class="card-icon">
+                        <i class="fas fa-stadium stadium-icon"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">AI's Second Half: Defining the Problems</h3>
+                        <p class="card-meta">2025年9月22日 · 1个来源</p>
+                    </div>
+                    <button class="card-menu" title="更多选项">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 新建笔记本模态框 -->
+    <div class="modal" id="newNotebookModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>新建笔记本</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="newNotebookForm">
+                    <div class="form-group">
+                        <label for="notebookTitle">笔记本标题</label>
+                        <input type="text" id="notebookTitle" placeholder="输入笔记本标题" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="notebookDescription">描述（可选）</label>
+                        <textarea id="notebookDescription" placeholder="输入笔记本描述"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-cancel">取消</button>
+                <button type="submit" class="btn-create" form="newNotebookForm">创建</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="home-script.js"></script>
+</body>
+</html>

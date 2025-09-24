@@ -1,0 +1,573 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 顶部导航栏 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: #2a2a2a;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+    background-color: #333;
+    color: #ffffff;
+}
+
+.user-avatar img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* 主容器 */
+.main-container {
+    display: flex;
+    height: calc(100vh - 73px);
+    background-color: #1a1a1a;
+}
+
+/* 左侧来源面板 */
+.source-panel {
+    width: 280px;
+    background-color: #222;
+    border-right: 1px solid #333;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.panel-header {
+    margin-bottom: 24px;
+}
+
+.panel-header h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.panel-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-primary {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #357ABD;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #888;
+    border: 1px solid #444;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #333;
+    color: #ffffff;
+}
+
+.source-controls {
+    margin-bottom: 20px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    accent-color: #4A90E2;
+}
+
+.source-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.source-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: all 0.2s ease;
+}
+
+.source-item:hover {
+    background-color: #333;
+    border-color: #444;
+}
+
+.source-item i {
+    margin-right: 12px;
+    color: #4A90E2;
+    font-size: 16px;
+}
+
+.source-item span {
+    flex: 1;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.source-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #4A90E2;
+}
+
+/* 中间对话面板 */
+.dialogue-panel {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.dialogue-header {
+    margin-bottom: 24px;
+}
+
+.dialogue-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.dialogue-title i {
+    margin-right: 12px;
+    color: #4A90E2;
+    font-size: 18px;
+}
+
+.dialogue-title h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.source-count {
+    font-size: 14px;
+    color: #888;
+}
+
+.dialogue-content {
+    flex: 1;
+    margin-bottom: 24px;
+}
+
+.content-text {
+    background-color: #2a2a2a;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+.content-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #e0e0e0;
+}
+
+.content-actions {
+    margin-bottom: 20px;
+}
+
+.btn-save {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-save:hover {
+    background-color: #357ABD;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.action-btn {
+    background-color: transparent;
+    color: #888;
+    border: 1px solid #444;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.action-btn:hover {
+    background-color: #333;
+    color: #ffffff;
+    border-color: #555;
+}
+
+.dialogue-input {
+    margin-top: auto;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 16px 20px;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.input-field:focus {
+    border-color: #4A90E2;
+}
+
+.input-field::placeholder {
+    color: #888;
+}
+
+.source-indicator {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #888;
+}
+
+.suggested-prompts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.prompt-item {
+    padding: 12px 16px;
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #ccc;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.prompt-item:hover {
+    background-color: #333;
+    border-color: #444;
+}
+
+.prompt-item i {
+    color: #4A90E2;
+}
+
+.disclaimer {
+    margin-top: 16px;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+
+/* 右侧Studio面板 */
+.studio-panel {
+    width: 320px;
+    background-color: #222;
+    border-left: 1px solid #333;
+    padding: 24px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.studio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.studio-card {
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.studio-card:hover {
+    background-color: #333;
+    border-color: #444;
+    transform: translateY(-2px);
+}
+
+.studio-card i:first-child {
+    font-size: 24px;
+    color: #4A90E2;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.studio-card span {
+    font-size: 12px;
+    color: #ccc;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.studio-card i:last-child {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 12px;
+    color: #666;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.studio-card:hover i:last-child {
+    opacity: 1;
+}
+
+.recent-activities {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: all 0.2s ease;
+}
+
+.activity-item:hover {
+    background-color: #333;
+    border-color: #444;
+}
+
+.activity-item i {
+    margin-right: 12px;
+    color: #4A90E2;
+    font-size: 16px;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-content span {
+    display: block;
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 4px;
+}
+
+.activity-content small {
+    font-size: 12px;
+    color: #666;
+}
+
+.floating-add-btn {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 16px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.floating-add-btn:hover {
+    background-color: #357ABD;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(74, 144, 226, 0.4);
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .studio-panel {
+        width: 280px;
+    }
+    
+    .source-panel {
+        width: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .source-panel,
+    .studio-panel {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+    }
+    
+    .dialogue-panel {
+        min-height: 400px;
+    }
+    
+    .studio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .floating-add-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dialogue-content,
+.studio-grid,
+.recent-activities {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* 加载动画 */
+.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

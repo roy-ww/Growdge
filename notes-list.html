@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精选笔记本 - NotebookLM</title>
+    <link rel="stylesheet" href="notes-list-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="logo-icon">N</div>
+                <span class="logo-text">NotebookLM</span>
+            </div>
+        </div>
+        
+        <nav class="header-nav">
+            <button class="nav-tab" data-tab="all">全部</button>
+            <button class="nav-tab" data-tab="my">我的笔记本</button>
+            <button class="nav-tab active" data-tab="featured">精选笔记本</button>
+        </nav>
+        
+        <div class="header-right">
+            <div class="view-controls">
+                <button class="view-btn" data-view="grid" title="网格视图">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button class="view-btn active" data-view="list" title="列表视图">
+                    <i class="fas fa-list"></i>
+                </button>
+            </div>
+            <div class="filter-controls">
+                <select class="filter-select" title="筛选选项">
+                    <option value="recent">最近</option>
+                    <option value="oldest">最旧</option>
+                    <option value="name">按名称</option>
+                    <option value="sources">按来源数</option>
+                </select>
+            </div>
+            <button class="btn-new">
+                <i class="fas fa-plus"></i>
+                新建
+            </button>
+            <button class="icon-btn" title="设置">
+                <i class="fas fa-cog"></i>
+            </button>
+            <button class="icon-btn" title="更多选项">
+                <i class="fas fa-th"></i>
+            </button>
+            <div class="user-avatar">
+                <img src="https://via.placeholder.com/32x32/4A90E2/FFFFFF?text=U" alt="用户头像">
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- 精选笔记本列表 -->
+        <section class="notes-section">
+            <div class="section-header">
+                <h1>精选笔记本</h1>
+            </div>
+            
+            <div class="notes-list">
+                <!-- 列表头部 -->
+                <div class="list-header">
+                    <div class="header-column name">名称</div>
+                    <div class="header-column source">来源</div>
+                    <div class="header-column date">创建时间</div>
+                    <div class="header-column role">角色</div>
+                </div>
+                
+                <!-- 笔记列表项 -->
+                <div class="list-items">
+                    <div class="list-item" data-id="1">
+                        <div class="item-icon">
+                            <div class="icon-circle red"></div>
+                        </div>
+                        <div class="item-name">
+                            <span class="name">健康长寿秘诀</span>
+                        </div>
+                        <div class="item-source">
+                            <span class="source-count">17个来源</span>
+                        </div>
+                        <div class="item-date">
+                            <span class="date">2025年5月6日</span>
+                        </div>
+                        <div class="item-role">
+                            <span class="role">Reader</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="action-btn" title="打开">
+                                <i class="fas fa-folder-open"></i>
+                            </button>
+                            <button class="action-btn" title="分享">
+                                <i class="fas fa-share"></i>
+                            </button>
+                            <button class="action-btn menu-btn" title="更多选项">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="list-item" data-id="2">
+                        <div class="item-icon">
+                            <div class="icon-square red">
+                                <span class="icon-text">E</span>
+                            </div>
+                        </div>
+                        <div class="item-name">
+                            <span class="name">2025年全球大趋势</span>
+                        </div>
+                        <div class="item-source">
+                            <span class="source-count">70个来源</span>
+                        </div>
+                        <div class="item-date">
+                            <span class="date">2025年7月7日</span>
+                        </div>
+                        <div class="item-role">
+                            <span class="role">Reader</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="action-btn" title="打开">
+                                <i class="fas fa-folder-open"></i>
+                            </button>
+                            <button class="action-btn" title="分享">
+                                <i class="fas fa-share"></i>
+                            </button>
+                            <button class="action-btn menu-btn" title="更多选项">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="list-item" data-id="3">
+                        <div class="item-icon">
+                            <div class="icon-circle gray">
+                                <span class="icon-text">N</span>
+                            </div>
+                        </div>
+                        <div class="item-name">
+                            <span class="name">前50大企业的盈利报告</span>
+                        </div>
+                        <div class="item-source">
+                            <span class="source-count">168个来源</span>
+                        </div>
+                        <div class="item-date">
+                            <span class="date">2025年4月18日</span>
+                        </div>
+                        <div class="item-role">
+                            <span class="role">Reader</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="action-btn" title="打开">
+                                <i class="fas fa-folder-open"></i>
+                            </button>
+                            <button class="action-btn" title="分享">
+                                <i class="fas fa-share"></i>
+                            </button>
+                            <button class="action-btn menu-btn" title="更多选项">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="list-item" data-id="4">
+                        <div class="item-icon">
+                            <div class="icon-circle gray">
+                                <span class="icon-text">N</span>
+                            </div>
+                        </div>
+                        <div class="item-name">
+                            <span class="name">科学迷的黄石游玩指南</span>
+                        </div>
+                        <div class="item-source">
+                            <span class="source-count">17个来源</span>
+                        </div>
+                        <div class="item-date">
+                            <span class="date">2025年5月12日</span>
+                        </div>
+                        <div class="item-role">
+                            <span class="role">Reader</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="action-btn" title="打开">
+                                <i class="fas fa-folder-open"></i>
+                            </button>
+                            <button class="action-btn" title="分享">
+                                <i class="fas fa-share"></i>
+                            </button>
+                            <button class="action-btn menu-btn" title="更多选项">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="list-item" data-id="5">
+                        <div class="item-icon">
+                            <div class="icon-circle gray">
+                                <span class="icon-text">N</span>
+                            </div>
+                        </div>
+                        <div class="item-name">
+                            <span class="name">威廉·莎士比亚:戏剧全集</span>
+                        </div>
+                        <div class="item-source">
+                            <span class="source-count">45个来源</span>
+                        </div>
+                        <div class="item-date">
+                            <span class="date">2025年4月26日</span>
+                        </div>
+                        <div class="item-role">
+                            <span class="role">Reader</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="action-btn" title="打开">
+                                <i class="fas fa-folder-open"></i>
+                            </button>
+                            <button class="action-btn" title="分享">
+                                <i class="fas fa-share"></i>
+                            </button>
+                            <button class="action-btn menu-btn" title="更多选项">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="list-item" data-id="6">
+                        <div class="item-icon">
+                            <div class="icon-square blue">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                        </div>
+                        <div class="item-name">
+                            <span class="name">健康、财富和幸福趋势</span>
+                        </div>
+                        <div class="item-source">
+                            <span class="source-count">24个来源</span>
+                        </div>
+                        <div class="item-date">
+                            <span class="date">2025年4月15日</span>
+                        </div>
+                        <div class="item-role">
+                            <span class="role">Reader</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="action-btn" title="打开">
+                                <i class="fas fa-folder-open"></i>
+                            </button>
+                            <button class="action-btn" title="分享">
+                                <i class="fas fa-share"></i>
+                            </button>
+                            <button class="action-btn menu-btn" title="更多选项">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="list-item" data-id="7">
+                        <div class="item-icon">
+                            <div class="icon-circle red">
+                                <i class="fas fa-arrow-up"></i>
+                            </div>
+                        </div>
+                        <div class="item-name">
+                            <span class="name">《The Atlantic》的"人生经营指南"专栏</span>
+                        </div>
+                        <div class="item-source">
+                            <span class="source-count">46个来源</span>
+                        </div>
+                        <div class="item-date">
+                            <span class="date">2025年4月23日</span>
+                        </div>
+                        <div class="item-role">
+                            <span class="role">Reader</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="action-btn" title="打开">
+                                <i class="fas fa-folder-open"></i>
+                            </button>
+                            <button class="action-btn" title="分享">
+                                <i class="fas fa-share"></i>
+                            </button>
+                            <button class="action-btn menu-btn" title="更多选项">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="list-item" data-id="8">
+                        <div class="item-icon">
+                            <div class="icon-circle gray">
+                                <span class="icon-text">N</span>
+                            </div>
+                        </div>
+                        <div class="item-name">
+                            <span class="name">数字时代的育儿建议</span>
+                        </div>
+                        <div class="item-source">
+                            <span class="source-count">21个来源</span>
+                        </div>
+                        <div class="item-date">
+                            <span class="date">2025年5月6日</span>
+                        </div>
+                        <div class="item-role">
+                            <span class="role">Reader</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="action-btn" title="打开">
+                                <i class="fas fa-folder-open"></i>
+                            </button>
+                            <button class="action-btn" title="分享">
+                                <i class="fas fa-share"></i>
+                            </button>
+                            <button class="action-btn menu-btn" title="更多选项">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 上下文菜单 -->
+    <div class="context-menu" id="contextMenu">
+        <div class="menu-item" data-action="open">
+            <i class="fas fa-folder-open"></i>
+            打开
+        </div>
+        <div class="menu-item" data-action="edit">
+            <i class="fas fa-edit"></i>
+            编辑
+        </div>
+        <div class="menu-item" data-action="duplicate">
+            <i class="fas fa-copy"></i>
+            复制
+        </div>
+        <div class="menu-item" data-action="share">
+            <i class="fas fa-share"></i>
+            分享
+        </div>
+        <div class="menu-item" data-action="favorite">
+            <i class="fas fa-star"></i>
+            收藏
+        </div>
+        <div class="menu-item danger" data-action="delete">
+            <i class="fas fa-trash"></i>
+            删除
+        </div>
+    </div>
+
+    <script src="notes-list-script.js"></script>
+</body>
+</html>
